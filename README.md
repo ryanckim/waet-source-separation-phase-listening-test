@@ -1,50 +1,28 @@
-# Web Audio Evaluation Tool
+# Listening test on the effect of phase in the context of source separation
 
-## Authors
-
-| Author  | e-mail | 
-| ------- | ------ |
-| Nicholas Jillings 				| <[nicholas.jillings@mail.bcu.ac.uk](mailto:nicholas.jillings@mail.bcu.ac.uk)> |
-| Brecht De Man					| <[brecht.deman@bcu.ac.uk](mailto:brecht.deman@bcu.ac.uk)> | 
-| David Moffat					| <[d.j.moffat@qmul.ac.uk](mailto:d.j.moffat@qmul.ac.uk)>| 
-| Joshua D. Reiss (supervisor)	| <[joshua.reiss@qmul.ac.uk](mailto:joshua.reiss@qmul.ac.uk)> | 
-| Ryan Stables (supervisor)		| <[ryan.stables@bcu.ac.uk](mailto:ryan.stables@bcu.ac.uk)> | 
-
-
-## Instructions
-
-Please refer to the [Wiki](https://github.com/BrechtDeMan/WebAudioEvaluationTool/wiki). 
-
-### Preview
-The video below shows you can set up a simple test from scratch in under five minutes (click to open): 
-[![Web Audio Evaluation Tool test setup](https://img.youtube.com/vi/T_rwE6Gt9sI/0.jpg)](https://www.youtube.com/watch?v=T_rwE6Gt9sI)
-
-## Dependencies and compatibility
-
-Runs out of the box on any web server with PHP (tested on PHP 5.1<=), no third party software needed. 
-
-Alternatively, a local server (no web server or internet connection needed!) and optional Python analysis scripts run on Python 2.7 or 3.x. 
-Plots rendered using [matplotlib](http://matplotlib.org), [NumPy](http://matplotlib.org) and [SciPy](http://scipy.org). 
-
-As Microsoft Internet Explorer [does not support the Web Audio API](http://caniuse.com/#feat=audio-api), you will need another browser like Firefox, Chrome, Edge or Safari.
-
-## Citing
-
-When using the Web Audio Evaluation Tool, please acknowledge the authors and cite 
+This is a listening test interface based on Web Audio Evaluation Tool (WAET):
 
 > Nicholas Jillings, Brecht De Man, David Moffat and Joshua D. Reiss, "[Web Audio Evaluation Tool: A Browser-Based Listening Test Environment](http://smcnetwork.org/system/files/SMC2015_submission_88.pdf)," [12th Sound and Music Computing Conference](http://www.maynoothuniversity.ie/smc15/), July 2015.
 
-BibTeX: 
+The original repository can be found [here](https://github.com/BrechtDeMan/WebAudioEvaluationTool).
 
-    @conference{waet2015,
-    	Author = {Jillings, Nicholas and Moffat, David and De Man, Brecht and Reiss, Joshua D.},
-	    Booktitle = {12th Sound and Music Computing Conference},
-	    Month = {July},
-	    Title = {Web {A}udio {E}valuation {T}ool: {A} browser-based listening test environment},
-    	Year = {2015}}
+## Instruction (local test)
 
-## License
+At this stage it's only possible to run it locally.
+
+1. Download or clone the whole repository
+
+2. Go to the `[WAET-home-folder]/python` folder and run `pythonServer.py` (Python 2.7 required for some reason!)
+
+3. Open a web browser (Chrome or Firefox recommended) and type
+
+	localhost:8000/test.html?url=tests/phasetest.xml
+
+4. Input your ID (initials preferred) and start the test
+
+5. When you finish, the result will be saved as an xml file in `[WAET-home-folder]/saves`. Identify the correct result file by the modified time or the ID you put inside the xml file (open the xml and use the find feature in any text editor).
+
+
+## WAET License
 
 Please refer to LICENSE.txt ([GNU General Public License](http://www.gnu.org/licenses/gpl-3.0.en.html)).
-
-If you wish to use elements of the Web Audio Evaluation Tool as part of a commercial product, please contact us for a commercial license. 
